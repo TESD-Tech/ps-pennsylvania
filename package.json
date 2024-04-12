@@ -1,0 +1,27 @@
+{
+  "name": "ps-svelte",
+  "private": true,
+  "version": "24.4.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^3.1.6",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@tesd-tech/ps-package": "^24.1.1",
+    "@unocss/preset-wind": "^0.58.3",
+    "@unocss/svelte-scoped": "^0.58.3",
+    "csv-parser": "^3.0.0",
+    "fs": "0.0.1-security",
+    "svelte": "^4.2.9",
+    "unocss": "^0.58.3",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "md5": "^2.3.0",
+    "postcss-cli": "^11.0.0"
+  }
+}

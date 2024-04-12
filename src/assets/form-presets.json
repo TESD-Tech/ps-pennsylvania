@@ -1,0 +1,64 @@
+{
+  "Abrasion/Scrape": [
+    {
+      "id": "assessment-muli-select",
+      "value": ["41016"]
+    },
+    {
+      "id": "visitreason-muli-select",
+      "value": ["38457"]
+    },
+    {
+      "id": "treatment-muli-select",
+      "value": ["40920", "41010"]
+    },
+    {
+      "id": "visitoutcome-muli-select",
+      "value": ["38458"]
+    },
+    {
+      "id": "visittype",
+      "value": "38404"
+    }
+  ],
+  "Nosebleed": [
+    {
+      "id": "assessment-muli-select",
+      "value": ["80924"]
+    },
+    {
+      "id": "treatment-muli-select",
+      "value": ["40976", "41011"]
+    },
+    {
+      "id": "visitoutcome-muli-select",
+      "value": ["38458"]
+    },
+    {
+      "id": "visittype",
+      "value": "38404"
+    }
+  ],
+  "Stomach Ache": [
+    {
+      "id": "assessment-muli-select",
+      "value": ["41150"]
+    },
+    {
+      "id": "visitreason-muli-select",
+      "value": ["38456"]
+    },
+    {
+      "id": "treatment-muli-select",
+      "value": ["40981", "41005", "41010", "58409", "40996"]
+    },
+    {
+      "id": "visitoutcome-muli-select",
+      "value": ["38458"]
+    },
+    {
+      "id": "visittype",
+      "value": "38404"
+    }
+  ]
+}

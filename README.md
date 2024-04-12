@@ -1,1 +1,3 @@
-# ps-pennsylvania
+# PS Pennsylvania
+
+TE Tech Pennsylvania Specific Enhancements

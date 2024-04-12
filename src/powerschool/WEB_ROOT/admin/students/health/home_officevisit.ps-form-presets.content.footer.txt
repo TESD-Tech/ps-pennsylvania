@@ -1,0 +1,70 @@
+<!-- START form_officevisit.ps-form-presets.footer.officevisit.ext.txt -->
+<script type="module" src="/ps-form-presets/FormPresets.js"></script>
+<ps-form-presets class="presetManager hidden" formSelector="#addEditOfficeVisit"></ps-form-presets>
+<script>
+  // Constants
+  const formSelector = '#addEditOfficeVisit'
+  const svelteComponentSelector = `ps-form-presets[formselector="${formSelector}"]`
+  const expandedClass = 'drawerPanelExpanded'
+  const componentClass = 'presetManager'
+
+  // Function to remove existing Svelte components
+  const removeExistingSvelteComponents = () => {
+    const componentsToRemove = document.getElementsByClassName('svelete-destroy')
+    Array.from(componentsToRemove).forEach(component => {
+      component.remove()
+    });
+  }
+
+  // Function to initialize the Svelte component
+  const initializeSvelteComponent = () => {
+    const svelteComponent = document.querySelector(svelteComponentSelector).cloneNode(true)
+    const form = document.querySelector(formSelector)
+
+    if (form && svelteComponent) {
+
+      // Remove any existing components
+      const componentsToRemove = document.getElementsByClassName('drawer-inserted')
+      Array.from(componentsToRemove).forEach(component => {
+        component.classList.add('svelte-destroy')
+        component.classList.add('hidden')
+      })
+
+      setTimeout(() => {
+        // Helps with Angular Drawers causing duplication
+        removeExistingSvelteComponents()
+      }, 1000)
+
+
+      svelteComponent.classList.remove('hidden')
+      svelteComponent.classList.add('drawer-inserted')
+      form.parentElement.prepend(svelteComponent)
+    }
+  }
+
+  // Function to initialize the Svelte component if the class is already present
+  const initializeSvelteComponentIfExpanded = () => {
+    const targetNode = document.body;
+    const config = { attributes: true, attributeFilter: ['class'] };
+
+    const callback = (mutationsList, observer) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const { classList } = mutation.target;
+          if (classList.contains(expandedClass)) {
+            // Call the function to initialize the Svelte component
+            initializeSvelteComponent();
+
+          }
+        }
+      }
+    };
+
+    const observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
+  };
+
+  // Call the function to initialize the Svelte component if the class is already present
+  initializeSvelteComponentIfExpanded()
+</script>
+<!-- END form_officevisit.ps-form-presets.footer.officevisit.ext.txt -->
